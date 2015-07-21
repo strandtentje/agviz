@@ -159,8 +159,8 @@ function getConnectPositions (exitPoint, entryPoint) {
 	return {
 		exitX: (exitRect.right + exitRect.left) / 2,
 		entryX: (entryRect.right + entryRect.left) / 2,
-		exitY: (exitRect.bottom + exitRect.top) / 2,
-		entryY: (entryRect.bottom + entryRect.top) / 2
+		exitY: (exitRect.bottom * 4 + exitRect.top) / 5,
+		entryY: (entryRect.bottom + entryRect.top * 2) / 3
 	};
 }
 
@@ -186,6 +186,10 @@ function drawWires (wireBox, exitPoints) {
 		var exitPoint = exitPoints[exitIndex];
 		var entryPoint = document.getElementById(exitPoint.id.replace("to", "is"));
 		
+		if (!entryPoint.className.startsWith("attached")) {
+			entryPoint.className = "attached " + entryPoint.className;
+		}		
+
 		var connectors = getConnectPositions(exitPoint, entryPoint);
 
 		var canvasId = exitPoint.parentNode.id.replace("int", "cnv");
