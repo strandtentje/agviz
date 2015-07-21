@@ -14,7 +14,7 @@ html, body {
 	display: inline-block;
 	position: relative;
 	margin: 0.5em;
-	padding: 0.5em;
+	padding: 1em 0.5em 0.5em 0.5em;
 	border: solid 1px black;
 }
 
@@ -24,13 +24,17 @@ html, body {
 }
 
 .entrypoint {
-	display: inline-block;
+	display: none;
 	position: absolute;
-	top: -1.5ex;
+	top: -0.6ex;
 	left: 0;
 	right: 0;
 	width: auto;
 	text-align: center;
+}
+
+.attached.entrypoint {
+	display: inline-block;
 }
 
 .interaction {
