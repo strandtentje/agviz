@@ -2,7 +2,9 @@
 	<div class="entrypoint" id="is{% serviceid %}">
 		&#x25BC;
 	</div>
-	<a href="./settings?serviceid={% serviceid %}">Show Settings</a>
+	<a href="{% currenturl %}/settings?serviceid={% serviceid %}">
+		Show Settings
+	</a>
 	{% link %}
 	<span class="id">
 		{% serviceid %}
@@ -13,6 +15,7 @@
 	<p>
 		{% servicedescription %}
 	</p>
+	{% detail %}
 	<span id="service{% serviceid %}order" class="order">
 		0
 	</span>

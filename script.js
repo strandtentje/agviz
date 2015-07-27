@@ -184,22 +184,27 @@ function drawWires (wireBox, exitPoints) {
 		exitIndex++) {
 
 		var exitPoint = exitPoints[exitIndex];
-		var entryPoint = document.getElementById(exitPoint.id.replace("to", "is"));
+		var entryPoint = document.getElementById(
+			exitPoint.id.replace("to", "is"));
 		
-		if (!entryPoint.className.startsWith("attached")) {
-			entryPoint.className = "attached " + entryPoint.className;
-		}		
+		if (entryPoint.className.startsWith("stub")) {
+			exitPoint.className = "stubbed " + exitPoint.className;
+		} else {
+			if (!entryPoint.className.startsWith("attached")) {
+				entryPoint.className = "attached " + entryPoint.className;
+			}		
 
-		var connectors = getConnectPositions(exitPoint, entryPoint);
+			var connectors = getConnectPositions(exitPoint, entryPoint);
 
-		var canvasId = exitPoint.parentNode.id.replace("int", "cnv");
-		var wireCanvas = getRightCanvas(wireBox, canvasId);
+			var canvasId = exitPoint.parentNode.id.replace("int", "cnv");
+			var wireCanvas = getRightCanvas(wireBox, canvasId);
 
-		configureCanvas(wireCanvas, 
-			connectors.exitX, connectors.entryX, 
-			connectors.exitY, connectors.entryY);
+			configureCanvas(wireCanvas, 
+				connectors.exitX, connectors.entryX, 
+				connectors.exitY, connectors.entryY);
 
-		drawWire(wireCanvas, connectors.exitX, connectors.entryX);
+			drawWire(wireCanvas, connectors.exitX, connectors.entryX);			
+		}
 	}
 }
 
