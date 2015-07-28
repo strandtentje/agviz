@@ -8,6 +8,8 @@ html, body {
 .servicelayer {
 	text-align: center;
   	padding: 1cm 0;
+  	background: none repeat scroll 0% 0% #DDD;
+	border-bottom: 1px solid #808080;
 }
 
 .serviceblock {
