@@ -2,9 +2,12 @@
 	<div class="entrypoint" id="is{% serviceid %}">
 		&#x25BC;
 	</div>
-	<a href="{% baseurl %}/setting?serviceid={% serviceid %}">
+	<a href="{% baseurl %}/setting?serviceid={% serviceid %}" class="expandlink" id="settingslink{% serviceid %}">
 		Show Settings
 	</a>
+	<div id="settingslink{% serviceid %}_target">
+
+	</div>
 	{% link %}
 	<span class="id">
 		{% serviceid %}

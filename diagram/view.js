@@ -228,3 +228,7 @@ drawWires(wireBox, exitPoints);
 window.onresize = function(event) {
 	drawWires(wireBox, exitPoints);
 };
+
+handleInvalidateWith(function() {
+	drawWires(wireBox, exitPoints);
+});
