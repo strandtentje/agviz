@@ -1,0 +1,25 @@
+<form method="post">
+	<legend>
+		Mutate setting
+	</legend>		
+	<span class="error">{% errordetail %}</span>
+	<div class="section">
+		<label for="key">
+			Key
+		</label>
+		<input name="key" type="text" value="{% key %}">
+		<span class="error">{% key_failure %}</span>
+	</div>
+	<div class="section">
+		<label for="value">
+			Value
+		</label>
+		<input name="value" type="text" value="{% value %}">
+	</div>
+	<div class="section">
+		<input type="submit" value="Apply">
+		<span class="message">
+			{% message %}
+		</span>
+	</div>
+</form>

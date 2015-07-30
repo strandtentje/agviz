@@ -69,3 +69,44 @@ html, body {
 .stubblock {
 	display: none;
 }
+
+#headbar {
+	border-bottom: 1px solid #808080
+}
+
+#headbar, #footer {
+	display: block;
+	width: 100%;	
+	background: ;
+}
+
+#logotext, #credits {
+	line-height: 1.3cm;
+	padding-left: 0.3cm;
+}
+
+#footer {
+	clear: both;
+	text-align: right;	
+}
+
+#credits {	
+	padding-right: 0.3cm;
+}
+
+form .section {
+	border-bottom: solid 1px gray;
+	text-align: middle;
+	line-height: 1cm;
+	clear: both;
+}
+
+form .section label {
+	width: 1.7cm;
+	display: block;
+	float: left;
+}
+
+form span.error {
+	display: block;
+}
